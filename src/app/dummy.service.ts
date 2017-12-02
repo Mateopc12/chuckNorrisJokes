@@ -10,7 +10,6 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class DummyService {
   url = 'https://api.chucknorris.io/jokes/random';
-  // url = 'https://my.api.mockaroo.com/my_saved_schema.json?key=0bf59570';
   constructor(private http: HttpClient) { }
 
   get(): Observable<any> {
