@@ -1,4 +1,6 @@
+import { DummyService } from './dummy.service';
 import { Component } from '@angular/core';
+import 'rxjs/add/observable/timer';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  joke;
+  constructor(private dummyService: DummyService) {
+    this.joke = this.dummyService.get();
+
+  }
 }
